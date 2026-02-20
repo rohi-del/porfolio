@@ -29,7 +29,7 @@ pipeline {
                         ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} "sudo rm -rf ${WEB_DIR}/*"
 
                         echo "Deploying new files..."
-                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} "sudo cp -r /tmp/site/* ${WEB_DIR}/"
+                        ssh -o StrictHostKeyChecking=no ${REMOTE_USER}@${SERVER_IP} "cp -r /tmp/site/* ${WEB_DIR}/"
                     '''
                 }
             }
